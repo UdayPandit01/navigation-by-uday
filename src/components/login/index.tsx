@@ -6,6 +6,6 @@ export default function Login() {
     return (
         <View>
             <Text>welcome to login page</Text>
-        </View>
+        </View>  
     );
 };
