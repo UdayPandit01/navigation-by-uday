@@ -1,12 +1,14 @@
 import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
-import SignUp from '../signup';
-import Login from '../login';
+// import SignUp from '../signup';
+// import Login from '../login';
+// import asyncStorage from '../asyncStorage';
 
 
 const Welcome = () => {
-  const navigator = useNavigation();
+  const navigator = useNavigation(); 
+
   const onClick = () => {
     console.log('clicked');
     navigator.navigate('SignUp');
@@ -16,6 +18,12 @@ const Welcome = () => {
     navigator.navigate('Login');
   };
 
+  const press = () => {
+    console.log('clicked');
+    navigator.navigate('asyncStorage');
+  };
+
+
   return (
     <View>
        <TouchableOpacity onPress={onClick}>
@@ -24,6 +32,10 @@ const Welcome = () => {
 
       <TouchableOpacity onPress={onTap}>
         <Text>click here to login</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={press}>
+        <Text>async storage</Text>
       </TouchableOpacity>
     </View>
   );
